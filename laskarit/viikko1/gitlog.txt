@@ -1,0 +1,102 @@
+Tehtävä 1
+
+ainokivi@melkki:~$ tree kurssit
+kurssit
+└── ot2023
+    └── viikko1
+
+2 directories, 0 files
+ainokivi@melkki:~$
+
+11
+
+
+ainokruth@LAPTOP-3OKQ9958:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit b14edb6b010d58a1a08e5495b7dae410f1d36788
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 21:38:37 2023 +0200
+
+    muutoksia
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3f4788b9413706f8860ea4f27ad0684761332dd5
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 21:36:58 2023 +0200
+
+    poistettu
+
+ tiedostoja/file1 | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit bcc999589cccbc9f9131900c960fb72bcbb2ac67
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 21:33:14 2023 +0200
+
+    jotain
+
+ tiedostoja/file1 | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 3cd80645f1a340787110314a5cc20a4685bc78ef
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 21:28:53 2023 +0200
+
+    uudet tiedostot
+
+ file1.txt            | 1 +
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 4 files changed, 1 insertion(+)
+
+commit da842d7ff55e865233c10bb1d25a81a96b72705e
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 16:28:11 2023 +0200
+
+    muutoksia
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 1 +
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 05443b4c1c56c5d34c7ae525c0182edc2ecf2708
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 16:00:56 2023 +0200
+
+    poistettu ja uudelleen nimetty
+
+ tiedosto.txt => eka.txt | 0
+ toinen.txt              | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f2c43110284d376ef5f8453487d0b72050090fb9
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 15:32:40 2023 +0200
+
+     lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b14f3a2636b07bd76526a373b352a6d5284873c2
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 15:29:32 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit f9cc9b35a5c21b49caa112005f5a4c7e2650fc6c
+Author: Aino Kruth <aino.kruth@helsinki.fi>
+Date:   Tue Mar 21 15:25:52 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ainokruth@LAPTOP-3OKQ9958:~/ot_viikko1/tiedostoja$
