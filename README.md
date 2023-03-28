@@ -4,9 +4,12 @@ tässä on tavallista tekstiä mitä kirjoitan. Tässä on **lihavoituja** ja _k
 
 Tehdään vähän muutoksia
 
-Linkki vaatimusmäärittelyyn:
+Tässä lLinkki vaatimusmäärittelyyn:
 
 https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/vaatimusmaarittely.md
 
+Tässä linkki Työaikakirjanpitoon:
+
+https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/tyoaikakirjanpito.md
 
 
