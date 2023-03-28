@@ -13,6 +13,7 @@ Suunnitellut toiminnallisuudet:
 -Käyttäjä voi pelata peliä
 -Käyttäjä voi pausettaa pelin kesken
 -Käyttäjä voi voittaa pelin
+-Käyttäjä voi nousta seuraavalle levelille pelin edetessä
  
 Jatkokehitysideoita:
 -Käyttäjä voi kirjauduttuaan pausettaa pelin, kirjautua ulos, ja jatkaa siitä mihin jäi seuraavalla kirjautumiskerralla.
