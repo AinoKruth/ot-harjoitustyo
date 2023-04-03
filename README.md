@@ -1,15 +1,11 @@
 ### otsikko
 
-tässä on tavallista tekstiä mitä kirjoitan. Tässä on **lihavoituja** ja _kursivoituja_ osioita.
 
-Tehdään vähän muutoksia
 
-Tässä lLinkki vaatimusmäärittelyyn:
+#Dokumentaatio.
 
-https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/vaatimusmaarittely.md
+- [Vaatimusmäärittely[(https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/vaatimusmaarittely.md)
 
-Tässä linkki Työaikakirjanpitoon:
-
-https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/tyoaikakirjanpito.md
+- [Työaikakirjanpitoon] (https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/tyoaikakirjanpito.md)
 
 
