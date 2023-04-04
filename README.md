@@ -2,7 +2,7 @@
 
 
 
-#Dokumentaatio.
+Dokumentaatio.
 
 - [Vaatimusmäärittely](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/laskarit/dokumentaatio/vaatimusmaarittely.md)
 
