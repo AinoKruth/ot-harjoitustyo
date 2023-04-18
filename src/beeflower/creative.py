@@ -33,9 +33,9 @@ class beeflower:
     #Downloading the pictures to the game
     
     def download_pictures(self):
-        self.mehilainen = pygame.image.load("ot-harjoitustyo/src/beeflower/pictures/mehilainen.png")
-        self.kukka = pygame.image.load("ot-harjoitustyo/src/beeflower/pictures/kukka.png")
-        self.pisara = pygame.image.load("ot-harjoitustyo/src/beeflower/pictures/pisara.png")
+        self.mehilainen = pygame.image.load("mehilainen.png")
+        self.kukka = pygame.image.load("kukka.png")
+        self.pisara = pygame.image.load("pisara.png")
 
         # Building the text:
     def starttext(self):
