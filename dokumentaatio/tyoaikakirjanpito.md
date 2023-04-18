@@ -10,4 +10,4 @@
 | 13.04 | 1    | Kansioiden uudelleen järjestämistä |
 | 17.04 | 2    | Yleistä häslinkiä koodin kanssa |
 | 18.04 | 3    | Pylint taistelua |
-| Tunnit yhteensä: 17,5 |
+| Tunnit yhteensä: | 17,5 |
