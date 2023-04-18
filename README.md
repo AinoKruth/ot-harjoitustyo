@@ -1,6 +1,6 @@
 # BeeFlower
 
-BeeFlower on peli, jossa pelataan meiläisellä. Mehiläisen tehtävä on kerätä 20 kukkaa, mutta varoa osumasta pisaroihin. Peli menee haastavammaksi, mitä enemmän kukkia on kerännyt.
+BeeFlower on peli, jossa pelataan Betty Mehiläisellä. Mehiläisen tehtävä on kerätä 20 kukkaa, mutta varoa osumasta pisaroihin. Peli menee haastavammaksi, mitä enemmän kukkia on kerännyt.
 
 ## Dokumentaatio
 
