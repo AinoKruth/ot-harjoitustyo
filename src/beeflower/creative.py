@@ -1,33 +1,3 @@
-import pygame
-from random import randint
- 
-class beeflower:
- 
-    #initializing the game
-    def __init__(self):
- 
-        pygame.init()
-        self.download_pictures()
- 
-        self.highscore = 0
-        self.hight = 480
-        self.width = 640
-        self.x = 0
-        self.y = self.hight-self.mehilainen.get_height()
- 
-        self.screen = pygame.display.set_mode((self.width, self.hight))
-        self.font = pygame.font.SysFont("Arial", 26)
-        self.font2 = pygame.font.SysFont("Arial", 30)
-        self.font3 = pygame.font.SysFont("Arial", 28)
-        self.clock = pygame.time.Clock()
-        
-        pygame.display.set_caption("BeeFlower")
- 
-        self.go = True
-        self.starttext()
-        self.new_game()
-        self.loop()
-
     #Downloading the pictures to the game
     def download_pictures(self):
         self.mehilainen = pygame.image.load("mehilainen.png")
