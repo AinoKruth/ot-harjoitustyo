@@ -12,10 +12,10 @@ Sovelluksessa on vain pelaaja käyttäjä.
 - Käyttäjä voi luoda pelaaja tunnuksen itselleen
 - Käyttäjä voi kirjautua peliin
 - Käyttäjä voi kirjauduttuaan nähdä high score tulee näkyviin aina, kun pelaaja jaa uuden ennätyksen.
-- Käyttäjä voi pelata peliä
+- Käyttäjä voi pelata peliä (tehty)
 - Käyttäjä voi pausettaa pelin kesken
-- Käyttäjä voi voittaa pelin
-- Käyttäjä voi nousta seuraavalle levelille pelin edetessä
+- Käyttäjä voi voittaa pelin (tehty)
+- Käyttäjä voi nousta seuraavalle levelille pelin edetessä (tehty)
  
 **Jatkokehitysideoita:**
 
