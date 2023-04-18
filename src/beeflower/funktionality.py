@@ -1,5 +1,4 @@
 import pygame
-from pygame.constants import (K_UP, K_DOWN, K_RIGHT, K_LEFT, QUIT, ESCAPE, KEYDOWN)
 from random import randint
 
 class beeflower:
