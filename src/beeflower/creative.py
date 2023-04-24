@@ -1,10 +1,33 @@
-    #Downloading the pictures to the game
+class creativity:
+    sdfds   
+
+#Downloading the pictures to the game
     def download_pictures(self):
         self.mehilainen = pygame.image.load("mehilainen.png")
         self.kukka = pygame.image.load("kukka.png")
         self.pisara = pygame.image.load("pisara.png")
 
-    #Building the text:
+#Drawing the screen
+    def draw_screen(self):
+
+        self.screen.fill((222, 33, 153))
+        self.screen.blit(self.mehilainen, (self.x, self.y))
+        for i in range(self.amounth):
+            self.screen.blit(self.kukka, (self.places[i][0], self.places[i][1]))
+        for i in range(self.amounth):
+            self.screen.blit(self.pisara, (self.places1[i][0], self.places1[i][1]))
+
+        #Defining the lower text:
+        text = self.font.render("points: " + str(self.points), True, (80, 12, 55))
+        self.screen.blit(text, (35, self.hight-30))
+
+        text = self.font.render("N = New Game", True, (80, 12, 55))
+        self.screen.blit(text, (240, self.hight-30))
+
+        text = self.font.render("Esc = Leave Game", True, (80, 12, 55))
+        self.screen.blit(text, (450, self.hight-30))
+
+#Building the start text:
     def starttext(self):
         start = False
         while True:
@@ -33,27 +56,7 @@
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2, 350))
             pygame.display.flip()
 
-  #Drawing the screen
-    def draw_screen(self):
-
-        self.screen.fill((222, 33, 153))
-        self.screen.blit(self.mehilainen, (self.x, self.y))
-        for i in range(self.amounth):
-            self.screen.blit(self.kukka, (self.places[i][0], self.places[i][1]))
-        for i in range(self.amounth):
-            self.screen.blit(self.pisara, (self.places1[i][0], self.places1[i][1]))
-
-        #Defining the lower text:
-        text = self.font.render("points: " + str(self.points), True, (80, 12, 55))
-        self.screen.blit(text, (35, self.hight-30))
-
-        text = self.font.render("N = New Game", True, (80, 12, 55))
-        self.screen.blit(text, (240, self.hight-30))
-
-        text = self.font.render("Esc = Leave Game", True, (80, 12, 55))
-        self.screen.blit(text, (450, self.hight-30))
-
-        #Defining the screen and the text when the game ends.
+#Defining the screen and the text when the game ends.
         if self.end_game():
             #If you win the game:
             if self.game_passed():
@@ -61,7 +64,7 @@
                 pygame.draw.rect(self.screen, (188, 25, 128), (65,160,522,170))
                 text = self.font2.render("Congratulations! Betty is a happy bee with all her honey!", True, ((80, 12, 55)))
                 self.screen.blit(text,(self.width / 2 - text.get_width()/2 ,223))
-            #And if you lose the game
+#And if you lose the game
             else:
                 pygame.draw.rect(self.screen, (80, 12, 55), (60,145,532,180))
                 pygame.draw.rect(self.screen, (188, 25, 128), (65,150,522,170))
