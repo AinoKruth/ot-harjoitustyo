@@ -8,7 +8,7 @@ class beeflower:
 
         pygame.init()
         self.download_pictures()
-
+    
         self.highscore = 0
         self.hight = 480
         self.width = 640
@@ -115,7 +115,7 @@ class beeflower:
                         self.down = True
                 if event.key == pygame.K_ESCAPE:
                     exit()
-                if event.key == pygame.K_u:
+                if event.key == pygame.K_n:
                     self.new_game()
 
             if event.type == pygame.KEYUP:
@@ -139,6 +139,15 @@ class beeflower:
             self.y -= 2
         if self.down:
             self.y += 2
+
+        if self.x <= 0:
+            self.left = False
+        if self.x >= 570:
+            self.right = False
+        if self.y <= 0:
+            self.up = False
+        if self.y >= 405:
+            self.down = False
 
         #If the game is not over or passed, defining the events
         if self.go == True:
@@ -225,7 +234,7 @@ class beeflower:
         text = self.font.render("points: " + str(self.points), True, (80, 12, 55))
         self.screen.blit(text, (35, self.hight-30))
 
-        text = self.font.render("U = New Game", True, (80, 12, 55))
+        text = self.font.render("N = New Game", True, (80, 12, 55))
         self.screen.blit(text, (240, self.hight-30))
 
         text = self.font.render("Esc = Leave Game", True, (80, 12, 55))
