@@ -1,20 +1,19 @@
 class gameloop:
     
-    def __init__(self):
-      
-    #Defining the loop of the game:
+#Defining the loop of the game:
     def loop(self):
         while True:
             self.see_event()
             self.draw_screen()
 
-    #Defining the events and keys of the game:
+#Defining the events and keys of the game:
+
     def see_event(self):
-        #Looking if the game is over or passed
+#Looking if the game is over or passed
         if self.game_passed():
             self.go = False
 
-        #Keys of the game
+#Keys of the game
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN:
@@ -45,10 +44,11 @@ class gameloop:
             if event.type == pygame.QUIT:
                 exit()
 
-        #If the game is not over or passed, defining the events
+#If the game is not over or passed, defining the events
         if self.go == True:
+#tähän kohtaan että hakee ne liikkumiset
 
-    #Defining highscore and end of the game
+#Defining highscore and end of the game
     def end_game(self):
         if self.go == False:
             if self.points > self.highscore:
@@ -57,7 +57,8 @@ class gameloop:
             return True
         else:
             return False
-    #Defining what happens when you win the game
+
+#Defining what happens when you win the game
     def game_passed(self):
 
         if self.points == 50:
