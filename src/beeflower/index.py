@@ -1,4 +1,4 @@
-    #initializing the game
+class index:
     def __init__(self):
 
         pygame.init()
@@ -22,7 +22,8 @@
         self.starttext()
         self.new_game()
         self.loop()
-    #Defining the starting points:
+        
+#Defining the starting points:
     def new_game(self):
         self.x = 0
         self.y = 480-self.mehilainen.get_height()
