@@ -1,5 +1,8 @@
+import pygame
+from index import index 
+
 class creativity:
-    sdfds   
+    def __init__(self):
 
 #Downloading the pictures to the game
     def download_pictures(self):
