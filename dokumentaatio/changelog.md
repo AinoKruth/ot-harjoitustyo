@@ -20,4 +20,4 @@ Viikko 5
 - Laitettu pause ominaisuus
 - Laitettu "seinät" pelille ettei hahmo voi liikkua sen ulkopuolelle.
 - Paranneltu kukkien ja pisaroiden osuvuutta.
-- Paranneltu näppäimiä.
+- Lisätty näppäimiä.
