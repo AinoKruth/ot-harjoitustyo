@@ -1,9 +1,9 @@
 import pygame
-from index import index 
+from index import index
 
-class creativity:
+class creative:
     def __init__(self):
-
+        None
 #Downloading the pictures to the game
     def download_pictures(self):
         self.mehilainen = pygame.image.load("mehilainen.png")

@@ -1,5 +1,12 @@
+import pygame
+
+from movement import movement
+
 class gameloop:
-    
+    def __init__(self):
+        self.x = x
+        self.y = y
+
 #Defining the loop of the game:
     def loop(self):
         while True:
@@ -46,6 +53,8 @@ class gameloop:
 
 #If the game is not over or passed, defining the events
         if self.go == True:
+            movement
+
 #tähän kohtaan että hakee ne liikkumiset
 
 #Defining highscore and end of the game
@@ -66,6 +75,6 @@ class gameloop:
             return True
         else:
             return False
-    
+
     pygame.display.flip()
     self.clock.tick(60)
