@@ -1,7 +1,8 @@
 import pygame
 from random import randint
 
-class beeflower:
+
+class BeeFlower:
 
     #initializing the game
     def __init__(self):
@@ -10,10 +11,18 @@ class beeflower:
         self.download_pictures()
 
         self.highscore = 0
-        self.hight = 480
+        self.height = 480
         self.width = 640
         self.x = 0
         self.y = self.height-self.mehilainen.get_height()
+
+        self.right = False
+        self.left = False
+        self.up = False
+        self.down = False
+
+        self.points = 0
+        self.go = True
 
         self.screen = pygame.display.set_mode((self.width, self.height))
         self.font = pygame.font.SysFont("Arial", 26)
@@ -53,7 +62,7 @@ class beeflower:
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2,100))
             text = self.font2.render("and she needs more flowers!", True, (80, 12, 55))
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2,150))
-            text = self.font2.render("Collect Bettu 20 flowers,", True, (80, 12, 55))
+            text = self.font2.render("Collect Betty 20 flowers,", True, (80, 12, 55))
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2,200))
             text = self.font2.render("so she can make a carton of honey again.", True, (80, 12, 55))
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2,250))
@@ -78,15 +87,25 @@ class beeflower:
 
         for i in range(self.amounth1):
             self.places1.append([randint(100,400),-randint(100,1000)])
-
-
-        self.right = False
-        self.left = False
-        self.up = False
-        self.down = False
-
         self.points = 0
         self.go = True
+    #defining how to pause game
+    def pause(self):
+        paused = True
+        while paused:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        paused = False
+            pygame.display.update()
+            self.clock.tick(5)
+
+
+
+
 
     #Defining the loop of the game:
     def loop(self):
@@ -115,8 +134,12 @@ class beeflower:
                         self.down = True
                 if event.key == pygame.K_ESCAPE:
                     exit()
-                if event.key == pygame.K_u:
+                if event.key == pygame.K_n:
                     self.new_game()
+                if event.key == pygame.K_p:
+                    self.pause()
+                if event.key == pygame.K_c:
+                    self.pause()
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
@@ -171,15 +194,16 @@ class beeflower:
                     self.places[i][1] = -randint(100,1000)
 
                 #Defining what happens when the bee gets the flower:
-                if self.places[i][1]+self.kukka.get_height() >= self.y and self.y+self.mehilainen.get_height() >= self.places[i][1]:
-                    mehilainen_middle = self.x+self.mehilainen.get_width()/2
-                    kukka_middle = self.places[i][0]+self.kukka.get_width()/2
-                    if abs(mehilainen_middle-kukka_middle) <= (self.mehilainen.get_width()+self.kukka.get_width())/2:
+                if self.places[i][1]+self.kukka.get_height()-25 >= self.y:
+                    if self.y+self.mehilainen.get_height()-25 >= self.places[i][1]:
+                        mehilainen_middle = self.x+self.mehilainen.get_width()/2
+                        kukka_middle = self.places[i][0]+self.kukka.get_width()/2
+                        if abs(mehilainen_middle-kukka_middle) <= (self.mehilainen.get_width()+self.kukka.get_width())/2:
 
                         #Defining a new starting point to the flower
-                        self.places[i][0] = randint(0,self.width-self.kukka.get_width())
-                        self.places[i][1] = -randint(100,1000)
-                        self.points += 1
+                            self.places[i][0] = randint(0,self.width-self.kukka.get_width())
+                            self.places[i][1] = -randint(100,1000)
+                            self.points += 1
 
             #Defining how fast the waterdrops drop, and making it quicker after every 5 flower that were catched:
             for i in range(self.amounth1):
@@ -198,11 +222,12 @@ class beeflower:
                     self.places1[i][1] = -randint(100,1000)
 
                 #Defining the game to end when the bee hits a waterdrop:
-                if self.places1[i][1]+self.pisara.get_height() >= self.y and self.y+self.mehilainen.get_height() >= self.places1[i][1]:
-                    mehilainen_middle = self.x+self.mehilainen.get_width()/2
-                    pisara_keski = self.places1[i][0]+self.pisara.get_width()/2
-                    if abs(mehilainen_middle-pisara_keski) <= (self.mehilainen.get_width()+self.pisara.get_width())/2:
-                        self.go = False
+                if self.places1[i][1]+self.pisara.get_height()-25 >= self.y:
+                    if self.y+self.mehilainen.get_height()-25  >= self.places1[i][1]:
+                        mehilainen_middle = self.x+self.mehilainen.get_width()/2
+                        pisara_keski = self.places1[i][0]+self.pisara.get_width()/2
+                        if abs(mehilainen_middle-pisara_keski) <= (self.mehilainen.get_width()+self.pisara.get_width())/2:
+                            self.go = False
 
     #Defining highscore and end of the game
     def end_game(self):
@@ -216,7 +241,7 @@ class beeflower:
     #Defining what happens when you win the game
     def game_passed(self):
 
-        if self.points == 50:
+        if self.points == 20:
             self.go = False
             return True
         else:
@@ -233,13 +258,16 @@ class beeflower:
             self.screen.blit(self.pisara, (self.places1[i][0], self.places1[i][1]))
 
         #Defining the lower text:
-        text = self.font.render("points: " + str(self.points), True, (80, 12, 55))
-        self.screen.blit(text, (35, self.height-30))
+        text = self.font.render("Points: " + str(self.points), True, (80, 12, 55))
+        self.screen.blit(text, (0, self.height-30))
 
-        text = self.font.render("U = New Game", True, (80, 12, 55))
-        self.screen.blit(text, (240, self.height-30))
+        text = self.font.render("P = Pause" , True, (80, 12, 55))
+        self.screen.blit(text, (120, self.height-30))
 
-        text = self.font.render("Esc = Leave Game", True, (80, 12, 55))
+        text = self.font.render("C = Continue", True, (80, 12, 55))
+        self.screen.blit(text, (280, self.height-30))
+
+        text = self.font.render("Esc = End Game ", True, (80, 12, 55))
         self.screen.blit(text, (450, self.height-30))
 
         #Defining the screen and the text when the game ends.
@@ -248,7 +276,7 @@ class beeflower:
             if self.game_passed():
                 pygame.draw.rect(self.screen, (80, 12, 55), (60,155,532,180))
                 pygame.draw.rect(self.screen, (188, 25, 128), (65,160,522,170))
-                text = self.font2.render("Congratulations! Betty is a happy bee with all of her honey!", True, ((80, 12, 55)))
+                text = self.font2.render("Betty is a happy bee with all of her honey!", True, ((80, 12, 55)))
                 self.screen.blit(text,(self.width / 2 - text.get_width()/2 ,223))
             #And if you lose the game
             else:
@@ -258,11 +286,11 @@ class beeflower:
                 self.screen.blit(text,(self.width / 2 - text.get_width()/2,175))
                 text = self.font3.render(f"High Score: {self.highscore}", True, (80, 12, 55))
                 self.screen.blit(text,(self.width / 2 - text.get_width()/2,220))
-                text = self.font3.render("New Game?", True, (80, 12, 55))
+                text = self.font3.render("New Game? Press n.", True, (80, 12, 55))
                 self.screen.blit(text,(self.width / 2 - text.get_width()/2,260))
 
         pygame.display.flip()
         self.clock.tick(60)
 
 if __name__ == "__main__":
-    beeflower()
+    BeeFlower()
