@@ -10,3 +10,16 @@ BeeFlower on peli, jossa pelataan Betty Mehiläisellä. Mehiläisen tehtävä on
 
 - [Changelog](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
+## Komentorivitoiminnot
+
+Ohjelman suorittaminen:
+poetry run invoke start
+
+Ohjelman testaus:
+poetry run invoke test
+
+Ohjelman testikattavuus:
+poery run invoke coverage-report
+
+Ohjelman pylint tarkastukset:
+poetry run invoke lint
