@@ -13,7 +13,7 @@ Sovelluksessa on vain pelaaja käyttäjä.
 - Käyttäjä voi kirjautua peliin
 - Käyttäjä voi kirjauduttuaan nähdä high score tulee näkyviin aina, kun pelaaja jaa uuden ennätyksen.
 - Käyttäjä voi pelata peliä (tehty)
-- Käyttäjä voi pausettaa pelin kesken
+- Käyttäjä voi pausettaa pelin kesken (tehty)
 - Käyttäjä voi voittaa pelin (tehty)
 - Käyttäjä voi nousta seuraavalle levelille pelin edetessä (tehty)
  
