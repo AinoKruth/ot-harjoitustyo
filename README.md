@@ -13,13 +13,18 @@ BeeFlower on peli, jossa pelataan Betty Mehiläisellä. Mehiläisen tehtävä on
 ## Komentorivitoiminnot
 
 Ohjelman suorittaminen:
+```bash 
 poetry run invoke start
-
+```
 Ohjelman testaus:
+```bash 
 poetry run invoke test
-
+```
 Ohjelman testikattavuus:
+```bash 
 poery run invoke coverage-report
-
+```
 Ohjelman pylint tarkastukset:
+```bash 
 poetry run invoke lint
+```
