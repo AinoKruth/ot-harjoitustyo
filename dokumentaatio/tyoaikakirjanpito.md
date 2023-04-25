@@ -10,4 +10,8 @@
 | 13.04 | 1    | Kansioiden uudelleen järjestämistä |
 | 17.04 | 2    | Yleistä häslinkiä koodin kanssa |
 | 18.04 | 3    | Pylint taistelua |
-| Tunnit yhteensä: | 17,5 |
+| 20.04 | 3    | Koodin laittoa |
+| 23.04 | 3    | pygamen tutkimista ja koodin laittoa |
+| 24.04 | 5    | Koodin jaottelua luokkiin ja loogisemmaksi kunnes tajusin etten saa valmiiksi niin että koodi toimisi ja laitoin kaiken takaisin paikoilleen..|
+| 25.04 | 5    | Koodin parantamista, pylintin parantelua lisäyksiä |
+| Tunnit yhteensä: | 33,5 |
