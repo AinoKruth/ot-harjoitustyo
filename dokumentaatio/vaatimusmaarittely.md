@@ -2,7 +2,7 @@
 
 **Sovelluksen tarkoitus:**
 
-Sovellus on peli, jossa tarkoituksena on kerätä rahoja, liikkumalla pelikentällä. Pelissä on myös ”mörköjä” joita pitää varoa, ja joista menettää elämiä. 
+Sovellus on peli, jossa tarkoituksena on kerätä kukkia mehiläiselle, liikkumalla pelikentällä. Pelissä on myös ”pisaroita” joita pitää varoa, ja joista menettää elämän.
 Kun pelissä on kerännyt tietyn verran rahaa, siinä mennään seuraavalle levelille, ja pelaaminen on haastavampaa.
 Käyttäjät:
 Sovelluksessa on vain pelaaja käyttäjä.
