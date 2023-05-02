@@ -40,6 +40,8 @@ class BeeFlower:
     #Downloading the pictures to the game
     def download_pictures(self):
         self.mehilainen = pygame.image.load("mehilainen.png")
+        self.mehilainencopy = self.mehilainen.copy()
+        self.mehilainencopy = pygame.transform.flip(self.mehilainen,True, False)
         self.kukka = pygame.image.load("kukka.png")
         self.pisara = pygame.image.load("pisara.png")
 
@@ -198,7 +200,7 @@ class BeeFlower:
                     if self.y+self.mehilainen.get_height()-25 >= self.places[i][1]:
                         mehilainen_middle = self.x+self.mehilainen.get_width()/2
                         kukka_middle = self.places[i][0]+self.kukka.get_width()/2
-                        if abs(mehilainen_middle-kukka_middle) <= (self.mehilainen.get_width()+self.kukka.get_width())/2:
+                        if abs(mehilainen_middle-kukka_middle) <= (self.mehilainen.get_width()+self.kukka.get_width())/2-22:
 
                         #Defining a new starting point to the flower
                             self.places[i][0] = randint(0,self.width-self.kukka.get_width())
@@ -226,7 +228,7 @@ class BeeFlower:
                     if self.y+self.mehilainen.get_height()-25  >= self.places1[i][1]:
                         mehilainen_middle = self.x+self.mehilainen.get_width()/2
                         pisara_keski = self.places1[i][0]+self.pisara.get_width()/2
-                        if abs(mehilainen_middle-pisara_keski) <= (self.mehilainen.get_width()+self.pisara.get_width())/2:
+                        if abs(mehilainen_middle-pisara_keski) <= (self.mehilainen.get_width()+self.pisara.get_width())/2-25:
                             self.go = False
 
     #Defining highscore and end of the game
@@ -251,7 +253,10 @@ class BeeFlower:
     def draw_screen(self):
 
         self.screen.fill((222, 33, 153))
-        self.screen.blit(self.mehilainen, (self.x, self.y))
+        if self.left == True:
+            self.screen.blit(self.mehilainencopy, (self.x, self.y))
+        else:
+            self.screen.blit(self.mehilainen, (self.x, self.y))
         for i in range(self.amounth):
             self.screen.blit(self.kukka, (self.places[i][0], self.places[i][1]))
         for i in range(self.amounth):
@@ -259,16 +264,16 @@ class BeeFlower:
 
         #Defining the lower text:
         text = self.font.render("Points: " + str(self.points), True, (80, 12, 55))
-        self.screen.blit(text, (0, self.height-30))
+        self.screen.blit(text, (10, self.height-30))
 
         text = self.font.render("P = Pause" , True, (80, 12, 55))
-        self.screen.blit(text, (120, self.height-30))
+        self.screen.blit(text, (140, self.height-30))
 
         text = self.font.render("C = Continue", True, (80, 12, 55))
-        self.screen.blit(text, (280, self.height-30))
+        self.screen.blit(text, (290, self.height-30))
 
         text = self.font.render("Esc = End Game ", True, (80, 12, 55))
-        self.screen.blit(text, (450, self.height-30))
+        self.screen.blit(text, (460, self.height-30))
 
         #Defining the screen and the text when the game ends.
         if self.end_game():
