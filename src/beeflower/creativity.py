@@ -1,12 +1,28 @@
 import pygame
+from random import randint
 
 class Creativity:
 
     def __init__(self):
+        
         self.download_pictures()
         self.height = 480
         self.width = 640
         self.screen = pygame.display.set_mode((self.width, self.height))
+        self.x = 0
+        self.y = self.height-self.mehilainen.get_height()
+        self.amounth = 5
+        self.amounth1 = 5
+        self.points = 0
+
+        self.places = []
+        self.places1 = []
+
+        self.font = pygame.font.SysFont("Arial", 26)
+        self.font2 = pygame.font.SysFont("Arial", 30)
+        self.font3 = pygame.font.SysFont("Arial", 28)
+
+
     #Downloading the pictures to the game
     def download_pictures(self):
         self.mehilainen = pygame.image.load("mehilainen.png")
@@ -36,12 +52,20 @@ class Creativity:
 
     #Drawing the screen
     def draw_screen(self):
+        self.x = 0
+        self.y = 480-self.mehilainen.get_height()
+
+        for i in range(self.amounth):
+            self.places.append([randint(0,590),-randint(100,1000)])
+
+        for i in range(self.amounth1):
+            self.places1.append([randint(100,400),-randint(100,1000)])
 
         self.screen.fill((222, 33, 153))
         self.screen.blit(self.mehilainen, (self.x, self.y))
-        for i in range(self.amounth):
+        for i in range(5):
             self.screen.blit(self.kukka, (self.places[i][0], self.places[i][1]))
-        for i in range(self.amounth):
+        for i in range(5):
             self.screen.blit(self.pisara, (self.places1[i][0], self.places1[i][1]))
 
         #Defining the lower text:
