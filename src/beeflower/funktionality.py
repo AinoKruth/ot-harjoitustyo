@@ -18,15 +18,15 @@ class BeeFlower:
         self.left = False
         self.up = False
         self.down = False
-
-        self.go = True
         self.clock = pygame.time.Clock()
 
         pygame.display.set_caption("BeeFlower")
 
         self.go = True
+        self.start()
         self.new_game()
         self.loop()
+
 
 #starting the game
     def start(self):
@@ -41,9 +41,10 @@ class BeeFlower:
             if start == True:
                 break
             self.Creativity.starttext()
+
     #Defining the starting points:
     def new_game(self):
-        self.Creativity.draw_screen()
+        self.Creativity.new()
         self.Creativity.points = 0
         self.go = True
     #defining how to pause game
@@ -190,18 +191,19 @@ class BeeFlower:
                 points = self.Creativity.points
                 self.highscore = points
             return True
+            self.Creativity.lose()
         else:
             return False
-        self.Creativity.lose()
+
     #Defining what happens when you win the game
     def game_passed(self):
 
         if self.Creativity.points == 20:
             self.go = False
             return True
+            self.Creativity.passed()
         else:
             return False
-        self.Creativity.passed()
 
 if __name__ == "__main__":
     BeeFlower()

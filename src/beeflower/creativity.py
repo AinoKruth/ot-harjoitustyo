@@ -4,7 +4,7 @@ from random import randint
 class Creativity:
 
     def __init__(self):
-        
+
         self.download_pictures()
         self.height = 480
         self.width = 640
@@ -50,16 +50,25 @@ class Creativity:
         self.screen.blit(text,(self.width / 2 - text.get_width() / 2, 350))
         pygame.display.flip()
 
-    #Drawing the screen
-    def draw_screen(self):
+    def new(self):
         self.x = 0
         self.y = 480-self.mehilainen.get_height()
+        self.amounth = 5
+        self.amounth1 = 5
+
+        self.places = []
+        self.places1 = []
 
         for i in range(self.amounth):
             self.places.append([randint(0,590),-randint(100,1000)])
 
         for i in range(self.amounth1):
             self.places1.append([randint(100,400),-randint(100,1000)])
+            
+    #Drawing the screen
+    def draw_screen(self):
+
+
 
         self.screen.fill((222, 33, 153))
         self.screen.blit(self.mehilainen, (self.x, self.y))
