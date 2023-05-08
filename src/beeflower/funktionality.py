@@ -298,4 +298,4 @@ class BeeFlower:
         self.clock.tick(60)
 
 if __name__ == "__main__":
-    BeeFlower()     
+    BeeFlower()
