@@ -1,9 +1,5 @@
 import pygame
 
-from events import Events
-from pictures import Download_pictures
-from bee import Bee
-
 class Draw:
 
     def __init__(self, Events, Download_pictures, Bee):
@@ -30,7 +26,7 @@ class Draw:
                 if event.type == event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
                         start = True
-            if start == True:
+            if start:
                 break
             self.screen.fill((222, 33, 153))
             pygame.draw.rect(self.screen, (80, 12, 55), (10,10,620,460))
@@ -53,7 +49,7 @@ class Draw:
     def draw_screen(self):
 
         self.screen.fill((222, 33, 153))
-        if self.bee.left == True:
+        if self.bee.left:
             self.screen.blit(self.dp.mehilainencopy, (self.bee.x, self.bee.y))
         else:
             self.screen.blit(self.dp.mehilainen, (self.bee.x, self.bee.y))

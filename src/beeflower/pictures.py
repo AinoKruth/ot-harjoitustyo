@@ -1,4 +1,5 @@
 import pygame
+import os
 
 class Download_pictures:
     def __init__(self):

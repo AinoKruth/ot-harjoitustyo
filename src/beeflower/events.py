@@ -1,6 +1,6 @@
-import pygame
 from random import randint
-from bee import Bee
+import pygame
+
 from pictures import Download_pictures
 
 class Events:
@@ -56,21 +56,21 @@ class Events:
 
     #Defining highscore and end of the game
     def end_game(self):
-        if self.go == False:
+        if not self.go:
             if self.points > self.highscore:
                 points = self.points
                 self.highscore = points
             return True
-        else:
-            return False
+
+        return False
     #Defining what happens when you win the game
     def game_passed(self):
 
         if self.points == 20:
             self.go = False
             return True
-        else:
-            return False
+
+        return False
 
     #Defining the events and keys of the game:
     def see_event(self):
@@ -83,7 +83,7 @@ class Events:
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN:
-                if self.go == True:
+                if self.go:
                     if event.key == pygame.K_LEFT:
                         self.bee.left = True
                     if event.key == pygame.K_RIGHT:
@@ -119,7 +119,7 @@ class Events:
 
 
         #If the game is not over or passed, defining the events
-        if self.go == True:
+        if self.go:
             self.flower_waterdrop()
 
 
