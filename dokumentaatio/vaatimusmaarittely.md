@@ -7,16 +7,20 @@ Kun pelissä on kerännyt tietyn verran rahaa, siinä mennään seuraavalle leve
 Käyttäjät:
 Sovelluksessa on vain pelaaja käyttäjä.
 
-**Suunnitellut toiminnallisuudet:**
+**Käyttäjät**
+Sovelluksella on vain yksi käyttäjä "pelaaja" joka voi pelata peliä omalla käyttäjä tunnuksella.
 
-- Käyttäjä voi luoda pelaaja tunnuksen itselleen
-- Käyttäjä voi kirjautua peliin
-- Käyttäjä voi kirjauduttuaan nähdä high score tulee näkyviin aina, kun pelaaja jaa uuden ennätyksen.
-- Käyttäjä voi pelata peliä (tehty)
-- Käyttäjä voi pausettaa pelin kesken (tehty)
-- Käyttäjä voi voittaa pelin (tehty)
-- Käyttäjä voi nousta seuraavalle levelille pelin edetessä (tehty)
- 
+**Käyttöliittymä**
+Sovelluksessa on ensin näkyvissä näkymä, joka selittää pelin idean, ja mihin pelaaja voi kirjoittaa käyttäjä nimensä. Tämän jälkeen mennään itse peliin. Jos pelaaja häviää pelin, tulee näkyville parhain tulos ja kuka sen on saanut, ja harmittelu teksti. Jos taas pelaaja voittaa sen tulee näkyville onnitteluteksti, sekä jälleen parhaimmat tulokset.
+
+**Toiminnallisuudet:**
+- Käyttäjä voi kirjoittaa käyttäjätunnuksen
+- Käyttäjä voi nähdä mikä käyttäjätunnus on saanut parhaimmat tulokset.
+- Käyttäjä voi pelata peliä
+- Käyttäjä voi pausettaa pelin kesken
+- Käyttäjä voi voittaa pelin
+- Käyttäjä voi nousta seuraavalle levelille pelin edetessä
+
 **Jatkokehitysideoita:**
 
 - Käyttäjä voi kirjauduttuaan pausettaa pelin, kirjautua ulos, ja jatkaa siitä mihin jäi seuraavalla kirjautumiskerralla.
