@@ -44,6 +44,7 @@ class Draw:
             text = self.font2.render("You can start the game by pressing enter.", True, (80, 12, 55))
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2, 350))
             pygame.display.flip()
+            self.events.inpt()
 
     #Drawing the screen
     def draw_screen(self):

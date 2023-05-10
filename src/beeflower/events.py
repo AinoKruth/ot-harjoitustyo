@@ -19,7 +19,6 @@ class Events:
         self.places1 = []
         self.clock = pygame.time.Clock()
 
-
 #Defining the starting points:
     def new_game(self):
         self.bee.x = 0
