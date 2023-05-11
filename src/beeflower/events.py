@@ -5,9 +5,10 @@ from pictures import Download_pictures
 
 class Events:
 
-    def __init__(self,Bee):
+    def __init__(self,Bee, Keys):
         self.bee = Bee
         self.dp = Download_pictures()
+        self.keys = Keys
         self.points = 0
         self.go = True
         self.highscore = 0
@@ -78,42 +79,7 @@ class Events:
         if self.game_passed():
             self.go = False
 
-        #Keys of the game
-        for event in pygame.event.get():
-
-            if event.type == pygame.KEYDOWN:
-                if self.go:
-                    if event.key == pygame.K_LEFT:
-                        self.bee.left = True
-                    if event.key == pygame.K_RIGHT:
-                        self.bee.right = True
-                    if event.key == pygame.K_UP:
-                        self.bee.up = True
-                    if event.key == pygame.K_DOWN:
-                        self.bee.down = True
-
-                if event.key == pygame.K_ESCAPE:
-                    exit()
-                if event.key == pygame.K_n:
-                    self.new_game()
-                if event.key == pygame.K_p:
-                    self.pause()
-                if event.key == pygame.K_c:
-                    self.pause()
-
-            if event.type == pygame.KEYUP:
-                if event.key == pygame.K_LEFT:
-                    self.bee.left = False
-                if event.key == pygame.K_RIGHT:
-                    self.bee.right = False
-                if event.key == pygame.K_UP:
-                    self.bee.up = False
-                if event.key == pygame.K_DOWN:
-                    self.bee.down = False
-
-            if event.type == pygame.QUIT:
-                exit()
-
+        self.keys.keys(self)
         self.bee.liiku()
 
 
