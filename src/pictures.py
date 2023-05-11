@@ -1,7 +1,7 @@
 import pygame
-import os
 
-class Download_pictures:
+class DownloadPictures:
+    #Downloading the pictures of the game
     def __init__(self):
         self.mehilainen = pygame.image.load("src/pictures/mehilainen.png")
         self.mehilainencopy = self.mehilainen.copy()

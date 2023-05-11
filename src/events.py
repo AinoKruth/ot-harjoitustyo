@@ -1,13 +1,13 @@
 from random import randint
 import pygame
 
-from pictures import Download_pictures
+from pictures import DownloadPictures
 
 class Events:
 
-    def __init__(self,Bee, Keys):
+    def __init__(self,Bee,Keys):
         self.bee = Bee
-        self.dp = Download_pictures()
+        self.dp = DownloadPictures()
         self.keys = Keys
         self.points = 0
         self.go = True
@@ -20,7 +20,7 @@ class Events:
         self.places1 = []
         self.clock = pygame.time.Clock()
 
-#Defining the starting points:
+    #Defining the starting points on a new game
     def new_game(self):
         self.bee.x = 0
         self.bee.y = 405
@@ -39,7 +39,7 @@ class Events:
         self.go = True
 
 
-    #defining how to pause game
+    #defining the pausing of the game
     def pause(self):
         paused = True
         while paused:
@@ -54,7 +54,7 @@ class Events:
             self.clock.tick(5)
 
 
-    #Defining highscore and end of the game
+    #Defining the end of the game
     def end_game(self):
         if not self.go:
             if self.points > self.highscore:
@@ -63,7 +63,8 @@ class Events:
             return True
 
         return False
-    #Defining what happens when you win the game
+
+    #Defining the winning of the game
     def game_passed(self):
 
         if self.points == 20:
@@ -72,16 +73,14 @@ class Events:
 
         return False
 
-    #Defining the events and keys of the game:
+    #Defining the events
     def see_event(self):
 
-        #Looking if the game is over or passed
         if self.game_passed():
             self.go = False
 
         self.keys.keys(self)
         self.bee.liiku()
-
 
         #If the game is not over or passed, defining the events
         if self.go:
@@ -112,8 +111,7 @@ class Events:
                     mehilainen_middle = self.bee.x+self.dp.mehilainen.get_width()/2
                     kukka_middle = self.places[i][0]+self.dp.kukka.get_width()/2
                     if abs(mehilainen_middle-kukka_middle) <= (self.dp.mehilainen.get_width()+self.dp.kukka.get_width())/2-22:
-
-                    #Defining a new starting point to the flower
+                         #Defining a new starting point to the flower
                         self.places[i][0] = randint(0,self.width-self.dp.kukka.get_width())
                         self.places[i][1] = -randint(100,1000)
                         self.points += 1

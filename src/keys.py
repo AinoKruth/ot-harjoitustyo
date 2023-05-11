@@ -6,12 +6,12 @@ class Keys:
         self.bee = Bee
         self.event = Events
 
+    #Defining the keys of the game
     def keys(self):
-        #Keys of the game
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN:
-                if self.go:
+                if self.event.go:
                     if event.key == pygame.K_LEFT:
                         self.bee.left = True
                     if event.key == pygame.K_RIGHT:

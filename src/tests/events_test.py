@@ -1,15 +1,18 @@
 import pygame
 import unittest
 from events import Events
+from bee import Bee
+from keys import Keys
 
 
 class TestEvents(unittest.TestCase):
 
     def setUp(self):
-      self.event = Events()
+        self.event = Events(Bee, Keys)
 
-    def gamePassed(self):
+    def test_gamePassed(self):
         self.event.go = True
-        self.event.game_passed = True
-        pisteet = self.event.points
-        self.assertEqual(pisteet, 20)
+        self.event.points = 20
+        value = self.event.game_passed()
+
+        self.assertTrue(value)

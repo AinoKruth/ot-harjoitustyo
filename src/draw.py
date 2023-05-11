@@ -2,13 +2,13 @@ import pygame
 
 class Draw:
 
-    def __init__(self, Events, Download_pictures, Bee):
+    def __init__(self, Events, DownloadPictures, Bee):
 
         self.height = 480
         self.width = 640
 
         self.events = Events
-        self.dp = Download_pictures
+        self.dp = DownloadPictures
         self.bee = Bee
         self.screen = pygame.display.set_mode((self.width, self.height))
         self.font = pygame.font.SysFont("Arial", 26)
@@ -16,8 +16,8 @@ class Draw:
         self.font3 = pygame.font.SysFont("Arial", 28)
 
 
-        #Building the start text:
-    def starttext(self):
+    #Building the start text:
+    def start_text(self):
         start = False
         while True:
             for event in pygame.event.get():
@@ -44,7 +44,8 @@ class Draw:
             text = self.font2.render("You can start the game by pressing enter.", True, (80, 12, 55))
             self.screen.blit(text,(self.width / 2 - text.get_width() / 2, 350))
             pygame.display.flip()
-    #Drawing the screen
+
+    #Drawing the screen of the game
     def draw_screen(self):
 
         self.screen.fill((222, 33, 153))
@@ -57,7 +58,7 @@ class Draw:
         for i in range(self.events.amounth):
             self.screen.blit(self.dp.pisara, (self.events.places1[i][0], self.events.places1[i][1]))
 
-        #Defining the lower text:
+        #Defining the lower text of the screen
         text = self.font.render("Points: " + str(self.events.points), True, (80, 12, 55))
         self.screen.blit(text, (10, self.height-30))
 
@@ -71,7 +72,6 @@ class Draw:
         self.screen.blit(text, (460, self.height-30))
 
         #Defining the screen and the text when the game ends.
-
         if self.events.end_game():
             #If you win the game:
             if self.events.game_passed():

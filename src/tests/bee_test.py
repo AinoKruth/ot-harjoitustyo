@@ -1,6 +1,7 @@
 import pygame
 import unittest
 from bee import Bee
+from events import Events
 
 
 class TestBee(unittest.TestCase):
@@ -31,7 +32,4 @@ class TestBee(unittest.TestCase):
       self.bee.liiku()
       maara = self.bee.y
       self.assertEqual(maara, 407)
-
-
-
 

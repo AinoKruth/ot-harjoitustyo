@@ -1,5 +1,3 @@
-import pygame
-
 class Bee:
 
     def __init__(self):
@@ -11,6 +9,7 @@ class Bee:
         self.up = False
         self.down = False
 
+    #Defining the movements of the bee
     def liiku(self):
         if self.right:
             self.x += 2
@@ -21,8 +20,7 @@ class Bee:
         if self.down:
             self.y += 2
 
-	#pidetään hahmo sisällä
-
+	#Keeping the bee inside the game
         if self.x <= 0:
             self.left = False
         if self.x >= 570:
@@ -31,4 +29,3 @@ class Bee:
             self.up = False
         if self.y >= 405:
             self.down = False
-

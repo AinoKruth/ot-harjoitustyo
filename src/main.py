@@ -1,8 +1,7 @@
 import pygame
-from random import randint
 
 from bee import Bee
-from pictures import Download_pictures
+from pictures import DownloadPictures
 from events import Events
 from draw import Draw
 from keys import Keys
@@ -13,14 +12,14 @@ class BeeFlower:
     def __init__(self):
 
         pygame.init()
-        self.dp = Download_pictures()
+        self.dp = DownloadPictures()
         self.bee = Bee()
         self.events = Events(self.bee, Keys)
         self.draw = Draw(self.events, self.dp, self.bee)
         self.keys = Keys(self.events, self.bee)
         pygame.display.set_caption("BeeFlower")
 
-        self.draw.starttext()
+        self.draw.start_text()
         self.events.new_game()
         self.loop()
 
