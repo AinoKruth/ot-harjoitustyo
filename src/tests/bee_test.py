@@ -8,9 +8,9 @@ class TestBee(unittest.TestCase):
    def setUp(self):
       self.bee = Bee
       
-   def test_move(self, x,y):
+   def test_move(self, self.bee.x,self.bee.y):
       self.right = True
-      maara = x
+      maara = self.bee.x
       self.assertEqual(maara, 2)
       
      
