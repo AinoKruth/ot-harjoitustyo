@@ -3,12 +3,12 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python3 src/beeflower/creative.py", pty=True)
+    ctx.run("python3 src/beeflower/main.py", pty=True)
 
 
-@task
-def build(ctx):
-    ctx.run("python3 src/beeflower/creative.py", pty=True)
+#@task
+#def build(ctx):
+ #   ctx.run("python3 src/beeflower/main.py", pty=True)
 
 
 @task
