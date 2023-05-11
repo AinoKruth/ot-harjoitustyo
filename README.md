@@ -14,15 +14,15 @@ BeeFlower on peli, jossa pelataan Betty Mehiläisellä. Mehiläisen tehtävä on
 - [Release](https://github.com/AinoKruth/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Asennus
-1. Asenna riippuvuudet komennolla:
+1. Asenna pelin riippuvuudet komennolla:
 ```bash
 poetry install
 ```
-2. Suorita vaadittavat alustustoimenpiteet komennolla:
+2. Suorita pelin vaadittavat alustustoimenpiteet komennolla:
 ```bash
 poetry run ivoke build
 ```
-3. Käynnistä sovellus komennolla:
+3. Käynnistä peli komennolla:
 ```bash
 poetry run invoke start
 ```
