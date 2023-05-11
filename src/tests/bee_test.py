@@ -1,5 +1,5 @@
+import pygame
 import unittest
-from main import Main
 from bee import Bee
 
 
