@@ -1,10 +1,10 @@
 import unittest
-import beeflower
+import Bee
 
 
-class Testbeeflower(unittest.TestCase):
-    def setUp(self):
-        print("Set up goes here")
+class TestBee(unittest.TestCase):
+   def setUp(self):
+        self.bee = Bee
+        
+   def bee_moves()
 
-    def test_hello_word(self):
-        self.assertEqual("Hello world", "Hello world")
