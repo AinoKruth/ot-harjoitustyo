@@ -15,4 +15,10 @@
 | 24.04 | 5    | Koodin jaottelua luokkiin ja loogisemmaksi kunnes tajusin etten saa valmiiksi niin että koodi toimisi ja laitoin kaiken takaisin paikoilleen..|
 | 25.04 | 5    | Koodin parantamista, pylintin parantelua lisäyksiä |
 | 27.04 | 2    | Koodin parantamista |
-| Tunnit yhteensä: | 35,5 |
+| 04.05 | 2    | Koodin jakoa |
+| 08.05 | 5    | Koodin jakoa |
+| 09.05 | 6    | Koodinjakoa, koodin parantelemista|
+| 10.05 | 4    | Testien tekemistä ja koodin kanssa puuhailua|
+| 11.05 | 6    | Dokumentoinnin parantelemista|
+| 13.05 |3     | Dokumentointia|
+| Tunnit yhteensä: | 61,5 |
