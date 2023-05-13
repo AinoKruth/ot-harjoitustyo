@@ -2,8 +2,8 @@
 
 ## Sovelluksen tarkoitus:
 
-Sovellus on peli, jossa tarkoituksena on kerätä kukkia mehiläiselle, liikkumalla pelikentällä. Pelissä on myös ”pisaroita” joita pitää varoa, ja joista menettää elämän.
-Kun pelissä on kerännyt tietyn verran rahaa, siinä mennään seuraavalle levelille, ja pelaaminen on haastavampaa.
+Sovellus on peli, jossa tarkoituksena on kerätä kukkia mehiläiselle, liikkumalla pelikentällä. Pelissä on myös ”pisaroita” joita pitää varoa, ja joihin osuessa peli loppuu.
+Kun pelissä on kerännyt tietyn verran kukkia, siinä mennään seuraavalle levelille, ja pelaaminen on haastavampaa.
 
 ## Käyttäjät
 
