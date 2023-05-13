@@ -7,13 +7,13 @@ BeeFlower on peli, jossa pelataan Betty Mehiläisellä. Mehiläisen tehtävä on
 
 - [Vaatimusmäärittely](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-- [Käyttöohje] (https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+- [Käyttöohje](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 
 - [Työaikakirjanpitoon](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/tyoaikakirjanpito.md)
 
--[Arkkitehtuurikuvaus] (https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+-[Arkkitehtuurikuvaus](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
--[Testausdokumentti] (https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
+-[Testausdokumentti](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
 
 - [Changelog](https://github.com/AinoKruth/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
