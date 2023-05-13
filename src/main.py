@@ -26,8 +26,9 @@ class BeeFlower:
     #Defining the loop of the game:
     def loop(self):
         while True:
-            self.events.see_event()
             self.draw.draw_screen()
+            self.events.see_event()
+
 
 
 
