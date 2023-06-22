@@ -67,7 +67,7 @@ class Events:
     #Defining the winning of the game
     def game_passed(self):
 
-        if self.points == 20:
+        if self.points == 1:
             self.go = False
             return True
 

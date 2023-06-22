@@ -4,14 +4,14 @@ class Keys:
 
     def __init__(self,Bee,Events):
         self.bee = Bee
-        self.event = Events
+        self.events = Events
 
     #Defining the keys of the game
     def keys(self):
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN:
-                if self.event.go:
+                if True:
                     if event.key == pygame.K_LEFT:
                         self.bee.left = True
                     if event.key == pygame.K_RIGHT:
@@ -24,11 +24,11 @@ class Keys:
                 if event.key == pygame.K_ESCAPE:
                     exit()
                 if event.key == pygame.K_n:
-                    self.event.new_game()
+                    self.new_game()
                 if event.key == pygame.K_p:
-                    self.event.pause()
+                    self.pause()
                 if event.key == pygame.K_c:
-                    self.event.pause()
+                    self.pause()
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
