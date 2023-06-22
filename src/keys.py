@@ -11,7 +11,7 @@ class Keys:
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN:
-                if True:
+                if self.go:
                     if event.key == pygame.K_LEFT:
                         self.bee.left = True
                     if event.key == pygame.K_RIGHT:
